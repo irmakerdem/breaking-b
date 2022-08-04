@@ -15,11 +15,11 @@ const Card = ({ img, name, nickname, occupation, status, portrayed, id }) => {
   return (
     <div className='card'>
       <img className='character-image' src={replaceURL()} alt={name} />
-      <p>Name: {name}</p>
-      <p>Nickname: {nickname}</p>
+      <p>{name}</p>
+      {/* <p>Nickname: {nickname}</p>
       <p>Occupation: {occupation}</p>
       <p>Status: {status}</p>
-      <p>Portrayed By: {portrayed}</p>
+      <p>Portrayed By: {portrayed}</p> */}
     </div>
   )
 }
