@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
 import './App.css';
-import { getCharacters } from '../../apiCalls';
+import {getCharacters} from '../../apiCalls';
 import Home from '../Home/Home';
+import DetailsCard from '../DetailsCard/DetailsCard';
+import Favorites from '../Favorites/Favorites';
 
 //hook is only needed if you need state!
 const App = () => {
@@ -24,12 +26,14 @@ const App = () => {
     })
   //empty dependency array
   }, [])
-  console.log("29", characters)
+  // console.log("29", characters)
 
   return (
     <main className='App'>
       <h1>Breaking Bad</h1>
       <Home characters={characters}/>
+      {/* <DetailsCard /> */}
+      {/* <Favorites /> */}
     </main>
   )
 }

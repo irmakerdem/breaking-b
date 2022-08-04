@@ -1,7 +1,7 @@
 import React from 'react';
 import './Card.css';
 
-const Card = ({ img, name, nickname, occupation, status, portrayed, id }) => {
+const Card = ({ img, name, id }) => {
   
   const replaceURL = () => {
     if(img.includes('static')) {
@@ -16,10 +16,6 @@ const Card = ({ img, name, nickname, occupation, status, portrayed, id }) => {
     <div className='card'>
       <img className='character-image' src={replaceURL()} alt={name} />
       <p>{name}</p>
-      {/* <p>Nickname: {nickname}</p>
-      <p>Occupation: {occupation}</p>
-      <p>Status: {status}</p>
-      <p>Portrayed By: {portrayed}</p> */}
     </div>
   )
 }
