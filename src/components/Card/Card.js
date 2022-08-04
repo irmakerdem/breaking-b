@@ -5,8 +5,8 @@ const Card = ({ img, name, nickname, occupation, status, portrayed, id }) => {
   
   const replaceURL = () => {
     if(img.includes('static')) {
-      let something2 = img.replace('static', 'vignette')
-      return something2
+      let wordReplace = img.replace('static', 'vignette')
+      return wordReplace
     } else {
       return img
     }
@@ -14,7 +14,7 @@ const Card = ({ img, name, nickname, occupation, status, portrayed, id }) => {
   
   return (
     <div className='card'>
-      <img className='characterImage' src={replaceURL()} alt={name} />
+      <img className='character-image' src={replaceURL()} alt={name} />
       <p>Name: {name}</p>
       <p>Nickname: {nickname}</p>
       <p>Occupation: {occupation}</p>
