@@ -4,6 +4,9 @@ import Card from '../Card/Card';
 
 const Home = ({ characters }) => {
   const characterCards = characters.map(character => {
+    if(character.img === "https://static.wikia.nocookie.net/breakingbad/images/0/08/Tumblr_lqddc79K9S1qc5omm.png/revision/latest?cb=20111012055605") {
+      character.img = "https://vignette.wikia.nocookie.net/breakingbad/images/0/08/Tumblr_lqddc79K9S1qc5omm.png/revision/latest?cb=20111012055605"
+    }
     return (
       <Card
         img={character.img}

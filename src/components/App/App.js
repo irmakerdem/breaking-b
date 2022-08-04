@@ -20,7 +20,7 @@ const App = () => {
       //spread operator opens up characters (which is an empty array)
       //spread operator is needed because it does NOT manipulate state
       //comma means adds the following after it
-      setCharacters([...characters, data])
+      setCharacters(...characters, data)
     })
   //empty dependency array
   }, [])

@@ -4,7 +4,7 @@ import './Card.css';
 const Card = ({ img, name, nickname, occupation, status, portrayed, id }) => {
   return (
     <div className='card'>
-      <img className='characterImage' src={img} alt={`${name} photo`} />
+      <img className='characterImage' src={img} alt={name} />
       <p>Name: {name}</p>
       <p>Nickname: {nickname}</p>
       <p>Occupation: {occupation}</p>
