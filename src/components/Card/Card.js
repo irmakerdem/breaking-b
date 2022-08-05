@@ -1,26 +1,17 @@
 import React from 'react';
 import './Card.css';
+import { Link } from 'react-router-dom';
 
-const Card = ({ img, name, nickname, occupation, status, portrayed, id }) => {
-  
-  const replaceURL = () => {
-    if(img.includes('static')) {
-      let wordReplace = img.replace('static', 'vignette')
-      return wordReplace
-    } else {
-      return img
-    }
-  }
+const Card = ({ img, name }) => {
   
   return (
-    <div className='card'>
-      <img className='character-image' src={replaceURL()} alt={name} />
-      <p>{name}</p>
-      {/* <p>Nickname: {nickname}</p>
-      <p>Occupation: {occupation}</p>
-      <p>Status: {status}</p>
-      <p>Portrayed By: {portrayed}</p> */}
-    </div>
+    <section className='card'>
+      <Link to={`/${name}`}>
+      {/* <Link to='/details'> */}
+        <img className='character-image' src={img} alt={name} />
+        <p>{name}</p>
+      </Link>
+    </section>
   )
 }
 
