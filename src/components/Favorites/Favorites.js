@@ -7,7 +7,7 @@ const Details = () => {
   return (
     <>
       {/* <FavoritesCard /> */}
-      <button>GO BACK</button>
+      <button>GO HOME</button>
       <p>❤️</p>
     </>
   )

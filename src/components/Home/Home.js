@@ -22,6 +22,7 @@ const Home = ({ characters, selectCharacter }) => {
 
   return (
     <>
+      <button>GO TO FAVORITES</button>
       {characterCards}
     </>
   )

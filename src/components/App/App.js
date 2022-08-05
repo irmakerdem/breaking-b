@@ -13,21 +13,18 @@ import Header from '../Header/Header';
 // character is equal to this.state
 const App = () => {
   const [ characters, setCharacters ] = useState([]);
-  // const [ singleCharacter, setSingleCharacter ] = useState({});
 
   useEffect(() => {
     getCharacters()
     .then(data => {
-      data = data.map(thing => {
-        // console.log(thing.img)
-        if(thing.img.includes('static')) {
-          thing.img = thing.img.replace('static', 'vignette')
-          return thing
+      data = data.map(char => {
+        if(char.img.includes('static')) {
+          char.img = char.img.replace('static', 'vignette')
+          return char
         } else {
-          return thing
+          return char
         }
       })
-      console.log("29", data)
       return data
     })
     .then(data => {
@@ -35,23 +32,15 @@ const App = () => {
     })
   }, [])
 
-  // console.log("37", characters)
-
   const selectCharacter = (event) => {
-    // console.log(event.target)
     return characters.find(character => { 
       if(event.target.char_id === character.char_id) {
-        // console.log("30", character.char_id)
-        // console.log("31", event.target.id)
         // setSingleCharacter(character)
         //line above is actually not needed. ask later.
-        // console.log("48", character)
         return character
       }
     })
   }
-
-  console.log("54", selectCharacter)
 
   return (
     // <Switch>
@@ -61,17 +50,10 @@ const App = () => {
         <Route exact path='/'>
           <Home characters={characters} />
         </Route>
-        {/* <Route path={`/${singleCharacter.name}${singleCharacter.char_id}`}> */}
         <Route path='/:fullname' render={(match) => {
           //does match.params take in the value of the "to" property of Link (which is name)
           //match is React Router keyword (an object) that has 4 native properties
-        // <Route path={`/details${char_id}`} render={(match) => {
           let matchedCharacter = match.match.params.fullname;
-          console.log("70", match)
-          console.log("66", matchedCharacter)
-          // if(!selectCharacter) {
-          //   return "Loading......"
-          // }
           return <DetailsCard matchedCharacter={matchedCharacter} characters={characters}/>     
         }} />
       </main>
