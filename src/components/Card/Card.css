@@ -3,6 +3,10 @@
   width: 25em;
 }
 
+.character-name {
+  text-align: center;
+}
+
 .card {
   height: 30em;
   width: 25em;
