@@ -6,7 +6,8 @@ const Card = ({ img, name, id, selectCharacter }) => {
   
   return (
     <section className='card'>
-      <Link to={`/${name}${id}`}>
+      {/* <Link to={`/${name}${id}`}> */}
+      <Link to='/details'>
         <img className='character-image' src={img} alt={name} onClick={(event) => selectCharacter(event)} />
         <p>{name}</p>
       </Link>
