@@ -1,4 +1,11 @@
 .character-image {
-  height: 25%;
-  width: 15%;
+  height: 30em;
+  width: 25em;
+}
+
+.card {
+  height: 30em;
+  width: 25em;
+  border: 0.15em solid green;
+  margin-bottom: 7em;
 }

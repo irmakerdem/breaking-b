@@ -41,13 +41,14 @@ const App = () => {
   return (
     <>
       <Header />
-      <Route path='/'>
-        <Home characters={characters} selectCharacter={selectCharacter}/>
-      </Route>
-      {/* <DetailsCard /> */}
-      {/* <Favorites /> */}
+      <main className='app-main'>
+        <Route path='/'>
+          <Home characters={characters} selectCharacter={selectCharacter}/>
+        </Route>
+        {/* <DetailsCard /> */}
+        {/* <Favorites /> */}
+      </main>
     </>
-
   )
 }
 

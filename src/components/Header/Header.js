@@ -3,9 +3,9 @@ import './Header.css';
 
 const Header = () => {
   return (
-    <main className='App'>
+    <header className='App'>
       <h1>Breaking Bad</h1>
-    </main>
+    </header>
   )
 }
 
