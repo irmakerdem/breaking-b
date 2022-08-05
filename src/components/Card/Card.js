@@ -14,16 +14,12 @@ const Card = ({ img, name, id, selectCharacter }) => {
   }
   
   return (
-    <Link to={`/details${id}`}>
-      <section className='card'>
-        <div className='character-img-div'>
-          <img className='character-image' src={replaceURL()} alt={name} onClick={(event) => selectCharacter(event)} />
-        </div>
-        <div className='character-name-div'>
-          <p>{name}</p>
-        </div>
-      </section>
-    </Link>
+    <section className='card'>
+      <Link to={`/${name}${id}`}>
+        <img className='character-image' src={replaceURL()} alt={name} onClick={(event) => selectCharacter(event)} />
+        <p>{name}</p>
+      </Link>
+    </section>
   )
 }
 

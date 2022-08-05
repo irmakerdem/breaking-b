@@ -6,6 +6,7 @@ import Home from '../Home/Home';
 import DetailsCard from '../DetailsCard/DetailsCard';
 import Favorites from '../Favorites/Favorites';
 import { Route } from 'react-router-dom';
+import Header from '../Header/Header';
 
 //hook is only needed if you need state!
 // character is equal to this.state
@@ -38,14 +39,15 @@ const App = () => {
   }
 
   return (
-    <main className='App'>
-        <h1>Breaking Bad</h1>
-    <Route>
-      <Home characters={characters} selectCharacter={selectCharacter}/>
-    </Route>
-        {/* <DetailsCard /> */}
-        {/* <Favorites /> */}
-      </main>
+    <>
+      <Header />
+      <Route path='/'>
+        <Home characters={characters} selectCharacter={selectCharacter}/>
+      </Route>
+      {/* <DetailsCard /> */}
+      {/* <Favorites /> */}
+    </>
+
   )
 }
 

@@ -22,9 +22,7 @@ const Home = ({ characters, selectCharacter }) => {
 
   return (
     <>
-      <div className='home-card-container'>
-        {characterCards}
-      </div>
+      {characterCards}
     </>
   )
 }
