@@ -7,7 +7,6 @@ const Card = ({ img, name }) => {
   return (
     <section className='card'>
       <Link to={`/${name}`}>
-      {/* <Link to='/details'> */}
         <img className='character-image' src={img} alt={name} />
         <p>{name}</p>
       </Link>

@@ -7,8 +7,8 @@ const Details = () => {
   return (
     <>
       {/* <FavoritesCard /> */}
-      <button>GO HOME</button>
-      <p>❤️</p>
+      <button className='go-home'>GO HOME</button>
+      <p className='heart'>❤️</p>
     </>
   )
 }

@@ -2,9 +2,8 @@ import React from 'react';
 import './DetailsCard.css';
 
 const DetailsCard = ({ matchedCharacter, characters }) => {
-// console.log(selectCharacter)
-  // let singleCharacter = selectCharacter;
   // let commaOccupation = occupation.join(', ')
+  
   let selectedCharacter = characters.find(character => matchedCharacter === character.name)
 
   return (
@@ -17,9 +16,9 @@ const DetailsCard = ({ matchedCharacter, characters }) => {
         <p>Status: {selectedCharacter.status}</p>
         <p>Portrayed By: {selectedCharacter.portrayed}</p>
       </div>
-      <button>GO HOME</button>
-      <button>GO TO FAVORITES</button>
-      <p>❤️</p>
+      <button className='go-home'>GO HOME</button>
+      <button className='go-favorites'>GO TO FAVORITES</button>
+      <p className='heart'>❤️</p>
     </>
   )
 }
