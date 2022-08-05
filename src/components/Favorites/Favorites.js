@@ -2,15 +2,15 @@ import React from 'react';
 import './Favorites.css';
 // import FavoritesCard from '../FavoritesCard/FavoritesCard';
 
-const Details = () => {
+const Favorites = () => {
 
   return (
     <>
-      {/* <FavoritesCard /> */}
       <button className='go-home'>GO HOME</button>
+      {/* <FavoritesCard /> */}
       <p className='heart'>❤️</p>
     </>
   )
 }
 
-export default Details;
+export default Favorites;

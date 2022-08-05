@@ -7,7 +7,6 @@ import DetailsCard from '../DetailsCard/DetailsCard';
 import Favorites from '../Favorites/Favorites';
 import { Route, Switch } from 'react-router-dom';
 import Header from '../Header/Header';
-// import Card from '../Card/Card';
 
 //hook is only needed if you need state!
 // character is equal to this.state
@@ -56,6 +55,9 @@ const App = () => {
           let matchedCharacter = match.match.params.fullname;
           return <DetailsCard matchedCharacter={matchedCharacter} characters={characters}/>     
         }} />
+        <Route path='/favorites'>
+          <Favorites />
+        </Route>
       </main>
     </>
     // </Switch>

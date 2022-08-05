@@ -1,5 +1,6 @@
 import React from 'react';
 import './DetailsCard.css';
+import { Link } from 'react-router-dom';
 
 const DetailsCard = ({ matchedCharacter, characters }) => {
   // let commaOccupation = occupation.join(', ')
@@ -17,7 +18,9 @@ const DetailsCard = ({ matchedCharacter, characters }) => {
         <p>Portrayed By: {selectedCharacter.portrayed}</p>
       </div>
       <button className='go-home'>GO HOME</button>
-      <button className='go-favorites'>GO TO FAVORITES</button>
+      <Link to='/favorites'>
+        <button className='go-favorites'>GO TO FAVORITES</button>
+      </Link>
       <p className='heart'>❤️</p>
     </>
   )

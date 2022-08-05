@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css';
 import Card from '../Card/Card';
+import { Link } from 'react-router-dom';
 
 const Home = ({ characters, selectCharacter }) => {
   const characterCards = characters.map(character => {
@@ -22,7 +23,9 @@ const Home = ({ characters, selectCharacter }) => {
 
   return (
     <>
-      <button className='go-favorites'>GO TO FAVORITES</button>
+      <Link to='/favorites'>
+        <button className='go-favorites'>GO TO FAVORITES</button>
+      </Link>
       {characterCards}
     </>
   )
