@@ -1,4 +1,11 @@
 .character-image {
   height: 25%;
   width: 15%;
+  /* height: 300%;
+  width: 300%; */
+}
+
+.character-img-div {
+  display: flex;
+  align-items: center;
 }

@@ -1,12 +1,12 @@
 import React from 'react';
 import './Favorites.css';
-import FavoritesCard from '../FavoritesCard/FavoritesCard';
+// import FavoritesCard from '../FavoritesCard/FavoritesCard';
 
 const Details = () => {
 
   return (
     <>
-      <FavoritesCard />
+      {/* <FavoritesCard /> */}
       <button>GO BACK</button>
       <p>❤️</p>
     </>

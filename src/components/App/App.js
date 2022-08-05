@@ -5,36 +5,47 @@ import {getCharacters} from '../../apiCalls';
 import Home from '../Home/Home';
 import DetailsCard from '../DetailsCard/DetailsCard';
 import Favorites from '../Favorites/Favorites';
+import { Route } from 'react-router-dom';
 
 //hook is only needed if you need state!
+// character is equal to this.state
 const App = () => {
   const [ characters, setCharacters ] = useState([]);
-  //characters is the variable
-  //setCharacters is the method that manipulates characters varibale
-  //useState is the hook that sets the initial value of characters variable
 
   useEffect(() => {
-    //method that runs an anonymous fcn that has an empty dependency array
-    //if you have an API and instead of pulling all the data, you can add a dependency of the array of the selection instead of empty
-    //syntax for empty useEffect is: useEffect(() => {}, [])
     getCharacters()
     .then(data => {
-      //spread operator opens up characters (which is an empty array)
-      //spread operator is needed because it does NOT manipulate state
-      //comma means adds the following after it
       setCharacters(...characters, data)
     })
-  //empty dependency array
   }, [])
-  // console.log("29", characters)
+
+  // console.log("21", characters)
+
+  const selectCharacter = (event) => {
+    console.log(event.target)
+    //if image is clicked, 
+    //look through big array and grab its id (event.tagrte.id)
+    //event.target.id === pid
+    characters.find(character => { 
+      if(event.target.char_id === character.char_id) {
+        console.log("30", character.char_id)
+        console.log("31", event.target.id)
+        return character
+      }
+    })
+
+    // console.log("24", characters)
+  }
 
   return (
     <main className='App'>
-      <h1>Breaking Bad</h1>
-      <Home characters={characters}/>
-      {/* <DetailsCard /> */}
-      {/* <Favorites /> */}
-    </main>
+        <h1>Breaking Bad</h1>
+    <Route>
+      <Home characters={characters} selectCharacter={selectCharacter}/>
+    </Route>
+        {/* <DetailsCard /> */}
+        {/* <Favorites /> */}
+      </main>
   )
 }
 
