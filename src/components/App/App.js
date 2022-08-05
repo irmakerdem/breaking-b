@@ -7,6 +7,7 @@ import DetailsCard from '../DetailsCard/DetailsCard';
 import Favorites from '../Favorites/Favorites';
 import { Route } from 'react-router-dom';
 import Header from '../Header/Header';
+// import Card from '../Card/Card';
 
 //hook is only needed if you need state!
 // character is equal to this.state
@@ -16,26 +17,34 @@ const App = () => {
   useEffect(() => {
     getCharacters()
     .then(data => {
+      data = data.map(thing => {
+        // console.log(thing.img)
+        if(thing.img.includes('static')) {
+          thing.img = thing.img.replace('static', 'vignette')
+          return thing
+        } else {
+          return thing
+        }
+      })
+      console.log("29", data)
+      return data
+    })
+    .then(data => {
       setCharacters(...characters, data)
     })
   }, [])
 
-  // console.log("21", characters)
+  // console.log("37", characters)
 
   const selectCharacter = (event) => {
-    console.log(event.target)
-    //if image is clicked, 
-    //look through big array and grab its id (event.tagrte.id)
-    //event.target.id === pid
+    // console.log(event.target)
     characters.find(character => { 
       if(event.target.char_id === character.char_id) {
-        console.log("30", character.char_id)
-        console.log("31", event.target.id)
+        // console.log("30", character.char_id)
+        // console.log("31", event.target.id)
         return character
       }
     })
-
-    // console.log("24", characters)
   }
 
   return (
@@ -43,7 +52,7 @@ const App = () => {
       <Header />
       <main className='app-main'>
         <Route path='/'>
-          <Home characters={characters} selectCharacter={selectCharacter}/>
+          <Home characters={characters} selectCharacter={selectCharacter} />
         </Route>
         {/* <DetailsCard /> */}
         {/* <Favorites /> */}

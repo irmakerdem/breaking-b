@@ -1,15 +1,14 @@
 import React from 'react';
 import './DetailsCard.css';
 
-const DetailsCard = ({ img, name, nickname, occupation, status, portrayed, replaceURL, id }) => {
-  
+const DetailsCard = ({ name, nickname, occupation, status, portrayed, img, id }) => {
+
   // let commaOccupation = occupation.join(', ')
 
   return (
     <>
       <div className='details-card'>
-        <img className='details-image' src={replaceURL()} alt={name} />
-        {/* <img className='details-card-image' src={img} alt={name} /> */}
+        <img className='details-card-image' src={img} alt={name} />
         <p>Name: {name}</p>
         <p>Nickname: {nickname}</p>
         <p>Occupation: {occupation}</p>
