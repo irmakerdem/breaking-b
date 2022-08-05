@@ -2,14 +2,15 @@ import React from 'react';
 import './Favorites.css';
 import { Link } from 'react-router-dom';
 
-const Favorites = () => {
+const Favorites = ({makeFavorite, char}) => {
+  console.log(char)
 
   return (
     <>
       <Link to='/'>
         <button className='go-home'>GO HOME</button>
       </Link>
-      <p className='heart'>❤️</p>
+      {char.isHearted === true ? <button className='full-heart'>💚</button> : <button className='empty-heart' onClick={() => makeFavorite()}>🤍</button>}
     </>
   )
 }

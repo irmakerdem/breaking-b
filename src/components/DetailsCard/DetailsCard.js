@@ -6,6 +6,12 @@ const DetailsCard = ({ matchedCharacter, characters }) => {
   // let commaOccupation = occupation.join(', ')
   
   let selectedCharacter = characters.find(character => matchedCharacter === character.name)
+  console.log("9", selectedCharacter)
+  const makeFavorite = () => {
+    console.log("11", selectedCharacter)
+    selectedCharacter.isHearted = true;
+    console.log("13", selectedCharacter)
+  } 
 
   return (
     <>
@@ -23,7 +29,7 @@ const DetailsCard = ({ matchedCharacter, characters }) => {
       <Link to='/favorites'>
         <button className='go-favorites'>GO TO FAVORITES</button>
       </Link>
-      <p className='heart'>❤️</p>
+      {selectedCharacter.isHearted ? <button className='full-heart'>💚</button> : <button className='empty-heart' onClick={() => makeFavorite()}>🤍</button>}
     </>
   )
 }

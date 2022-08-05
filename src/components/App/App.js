@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import PropTypes from 'prop-types';
 import './App.css';
-import {getCharacters} from '../../apiCalls';
+import { getCharacters } from '../../apiCalls';
 import Home from '../Home/Home';
 import DetailsCard from '../DetailsCard/DetailsCard';
 import Favorites from '../Favorites/Favorites';
@@ -9,7 +9,6 @@ import { Route, Switch } from 'react-router-dom';
 import Header from '../Header/Header';
 
 //hook is only needed if you need state!
-// character is equal to this.state
 const App = () => {
   const [ characters, setCharacters ] = useState([]);
 
@@ -17,6 +16,7 @@ const App = () => {
     getCharacters()
     .then(data => {
       data = data.map(char => {
+        char.isHearted = false
         if(char.img.includes('static')) {
           char.img = char.img.replace('static', 'vignette')
           return char
@@ -30,24 +30,13 @@ const App = () => {
       setCharacters(...characters, data)
     })
   }, [])
-
-  const selectCharacter = (event) => {
-    return characters.find(character => { 
-      if(event.target.char_id === character.char_id) {
-        // setSingleCharacter(character)
-        //line above is actually not needed. ask later.
-        return character
-      }
-    })
-  }
-
-  //switch returns first route that matches instead of rendering all matching routes
-
+  
   return (
     <>
       <Header />
       <main className='app-main'>
         <Switch>
+    {/* switch returns first route that matches instead of rendering all matching routes */}
           <Route exact path='/'>
             <Home characters={characters} />
           </Route>
