@@ -17,7 +17,9 @@ const DetailsCard = ({ matchedCharacter, characters }) => {
         <p>Status: {selectedCharacter.status}</p>
         <p>Portrayed By: {selectedCharacter.portrayed}</p>
       </div>
-      <button className='go-home'>GO HOME</button>
+      <Link to='/'>
+        <button className='go-home'>GO HOME</button>
+      </Link>
       <Link to='/favorites'>
         <button className='go-favorites'>GO TO FAVORITES</button>
       </Link>
