@@ -31,6 +31,12 @@ const App = () => {
     })
   }, [])
   
+  const makeFavorite = (selected) => {
+    console.log("35", selected)
+    selected.isHearted = true;
+    console.log("37", selected)
+  } 
+
   return (
     <>
       <Header />
@@ -42,14 +48,14 @@ const App = () => {
           </Route>
           <Route exact path='/favorites'>
             {/* favorites is still considered the same as /:fullname because '/:fullname' makes anything after slash dynamic */}
-            <Favorites />
+            <Favorites makeFavorite={makeFavorite}/>
           </Route>
           <Route path='/:fullname' render={(match) => {
             //leave the dynamic route at the end of all routes
             //does match.params take in the value of the "to" property of Link (which is name)
             //match is React Router keyword (an object) that has 4 native properties
             let matchedCharacter = match.match.params.fullname;
-            return <DetailsCard matchedCharacter={matchedCharacter} characters={characters}/>     
+            return <DetailsCard matchedCharacter={matchedCharacter} characters={characters} makeFavorite={makeFavorite}/>     
           }} />
         </Switch>
       </main>
