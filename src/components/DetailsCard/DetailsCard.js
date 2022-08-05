@@ -30,6 +30,7 @@ const DetailsCard = ({ matchedCharacter, characters, makeFavorite }) => {
         <button className='go-favorites'>GO TO FAVORITES</button>
       </Link>
       {selectedCharacter.isHearted ? <button className='full-heart'>💚</button> : <button className='empty-heart' onClick={(selectedCharacter) => makeFavorite(selectedCharacter)}>🤍</button>}
+      {console.log("33s", selectedCharacter)}
     </>
   )
 }

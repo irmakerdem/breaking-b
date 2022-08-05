@@ -44,7 +44,7 @@ const App = () => {
         <Switch>
     {/* switch returns first route that matches instead of rendering all matching routes */}
           <Route exact path='/'>
-            <Home characters={characters} />
+            <Home characters={characters}/>
           </Route>
           <Route exact path='/favorites'>
             {/* favorites is still considered the same as /:fullname because '/:fullname' makes anything after slash dynamic */}

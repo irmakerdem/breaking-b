@@ -2,8 +2,8 @@ import React from 'react';
 import './Favorites.css';
 import { Link } from 'react-router-dom';
 
-const Favorites = ({makeFavorite, char}) => {
-  console.log(char)
+const Favorites = ({ makeFavorite, char }) => {
+  console.log("6", char)
 
   return (
     <>
