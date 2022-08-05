@@ -41,26 +41,30 @@ const App = () => {
     })
   }
 
+  //switch returns first route that matches instead of rendering all matching routes
+
   return (
-    // <Switch>
     <>
       <Header />
       <main className='app-main'>
-        <Route exact path='/'>
-          <Home characters={characters} />
-        </Route>
-        <Route path='/:fullname' render={(match) => {
-          //does match.params take in the value of the "to" property of Link (which is name)
-          //match is React Router keyword (an object) that has 4 native properties
-          let matchedCharacter = match.match.params.fullname;
-          return <DetailsCard matchedCharacter={matchedCharacter} characters={characters}/>     
-        }} />
-        <Route path='/favorites'>
-          <Favorites />
-        </Route>
+        <Switch>
+          <Route exact path='/'>
+            <Home characters={characters} />
+          </Route>
+          <Route exact path='/favorites'>
+            {/* favorites is still considered the same as /:fullname because '/:fullname' makes anything after slash dynamic */}
+            <Favorites />
+          </Route>
+          <Route path='/:fullname' render={(match) => {
+            //leave the dynamic route at the end of all routes
+            //does match.params take in the value of the "to" property of Link (which is name)
+            //match is React Router keyword (an object) that has 4 native properties
+            let matchedCharacter = match.match.params.fullname;
+            return <DetailsCard matchedCharacter={matchedCharacter} characters={characters}/>     
+          }} />
+        </Switch>
       </main>
     </>
-    // </Switch>
   )
 }
 
