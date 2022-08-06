@@ -3,8 +3,7 @@ import './Favorites.css';
 import { Link } from 'react-router-dom';
 import Card from '../Card/Card';
 
-const Favorites = ({ makeFavorite, char, favorites, unfavorite }) => {
-  console.log("6", char)
+const Favorites = ({ favorites }) => {
 
   const favoritedCharacters = favorites.map(fav => {
 
@@ -28,7 +27,6 @@ const Favorites = ({ makeFavorite, char, favorites, unfavorite }) => {
         <button className='go-home'>GO HOME</button>
       </Link>
       {favoritedCharacters}
-      {/* {char.isHearted && <button className='full-heart'>💚</button> ? <button className='full-heart' onClick={() => unfavorite(char)}>💚</button> : <button className='empty-heart' onClick={() => makeFavorite()}>🤍</button>} */}
     </>
   )
 }

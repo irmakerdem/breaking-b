@@ -3,9 +3,8 @@ import './Home.css';
 import Card from '../Card/Card';
 import { Link } from 'react-router-dom';
 
-const Home = ({ characters, selectCharacter }) => {
+const Home = ({ characters }) => {
   const characterCards = characters.map(character => {
-
     return (
       <Card
         img={character.img}
@@ -16,7 +15,6 @@ const Home = ({ characters, selectCharacter }) => {
         portrayed={character.portrayed}
         key={character.char_id}
         id={character.char_id}
-        // selectCharacter={selectCharacter}
       />
     )
   })

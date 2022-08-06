@@ -15,17 +15,3 @@ const Card = ({ img, name }) => {
 }
 
 export default Card;
-
-
-// class Card {
-//   constructor(char) {
-//     this.name = char.name,
-//     this.img = char.img,
-//     this.occupation = char.occupation,
-//     // this.isHearted = false
-//   }
-
-//   makeFavorite() {
-//     char.isHearted = true
-//   }
-// }

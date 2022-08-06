@@ -21,14 +21,7 @@ const DetailsCard = ({ selectedCharacter, makeFavorite, unfavorite }) => {
       <Link to='/favorites'>
         <button className='go-favorites'>GO TO FAVORITES</button>
       </Link>
-      {/* {selectedCharacter.isHearted ? <button className='full-heart'>💚</button> : <button className='empty-heart' onClick={() => makeFavorite(selectedCharacter)}>🤍</button>} */}
       {selectedCharacter.isHearted && <button className='full-heart'>💚</button> ? <button className='full-heart' onClick={() => unfavorite(selectedCharacter)}>💚</button> : <button className='empty-heart' onClick={() => makeFavorite(selectedCharacter)}>🤍</button>}
-
-      {/* need to prevent duplicate favoriting */}
-      {/* need to add functionality to details page to unfavorite from there but also delete on favorites page */}
-      {/* need to add functionality to favorites page to unfavorite from there */}
-
-      {console.log("33s", selectedCharacter)}
     </>
   )
 }
