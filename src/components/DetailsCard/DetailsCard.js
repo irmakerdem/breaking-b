@@ -1,11 +1,9 @@
 import React from 'react';
 import './DetailsCard.css';
+import { Link } from 'react-router-dom';
 
-const DetailsCard = ({ matchedCharacter, characters }) => {
-// console.log(selectCharacter)
-  // let singleCharacter = selectCharacter;
+const DetailsCard = ({ selectedCharacter, makeFavorite, unfavorite }) => {
   // let commaOccupation = occupation.join(', ')
-  let selectedCharacter = characters.find(character => matchedCharacter === character.name)
 
   return (
     <>
@@ -17,8 +15,13 @@ const DetailsCard = ({ matchedCharacter, characters }) => {
         <p>Status: {selectedCharacter.status}</p>
         <p>Portrayed By: {selectedCharacter.portrayed}</p>
       </div>
-      <button>GO BACK</button>
-      <p>❤️</p>
+      <Link to='/'>
+        <button className='go-home'>GO HOME</button>
+      </Link>
+      <Link to='/favorites'>
+        <button className='go-favorites'>GO TO FAVORITES</button>
+      </Link>
+      {selectedCharacter.isHearted && <button className='full-heart'>💚</button> ? <button className='full-heart' onClick={() => unfavorite(selectedCharacter)}>💚</button> : <button className='empty-heart' onClick={() => makeFavorite(selectedCharacter)}>🤍</button>}
     </>
   )
 }

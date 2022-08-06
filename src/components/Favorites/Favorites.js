@@ -1,16 +1,34 @@
 import React from 'react';
 import './Favorites.css';
-// import FavoritesCard from '../FavoritesCard/FavoritesCard';
+import { Link } from 'react-router-dom';
+import Card from '../Card/Card';
 
-const Details = () => {
+const Favorites = ({ favorites }) => {
+
+  const favoritedCharacters = favorites.map(fav => {
+
+    return (
+      <Card
+        img={fav.img}
+        name={fav.name}
+        nickname={fav.nickname}
+        occupation={fav.occupation}
+        status={fav.status}
+        portrayed={fav.portrayed}
+        key={fav.char_id}
+        id={fav.char_id}
+      />
+    )
+  })
 
   return (
     <>
-      {/* <FavoritesCard /> */}
-      <button>GO BACK</button>
-      <p>❤️</p>
+      <Link to='/'>
+        <button className='go-home'>GO HOME</button>
+      </Link>
+      {favoritedCharacters}
     </>
   )
 }
 
-export default Details;
+export default Favorites;
