@@ -13,7 +13,7 @@
 - [Project Specifications](#project-specifications)
 
 ### Introduction
-Breaking Bad is an app built to help you study 📚 for Breaking Bad Trivia Night. You can see a list of characters on page load which you can click on and see their details 📝. If there are any character information you keep getting stuck on 😖 or keep getting wrong on trivia night, you can 💚 favorite and unfavorite them!
+Breaking Bad is an app built to help you study 📚 for Breaking Bad Trivia Night. You can see a list of characters on page load, click on a character, and see their details 📝. If there are any character's information you keep getting stuck on 😖, you can 💚 favorite and unfavorite them!
 
 This app fetches data from [The Breaking Bad API](https://breakingbadapi.com/).
 
