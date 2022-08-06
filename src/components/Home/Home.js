@@ -16,7 +16,7 @@ const Home = ({ characters, selectCharacter }) => {
         portrayed={character.portrayed}
         key={character.char_id}
         id={character.char_id}
-        selectCharacter={selectCharacter}
+        // selectCharacter={selectCharacter}
       />
     )
   })
