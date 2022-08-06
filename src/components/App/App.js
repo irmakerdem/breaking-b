@@ -33,11 +33,17 @@ const App = () => {
   }, [])
   
   const makeFavorite = (selected) => {
-    console.log("35", selected)
+    // console.log("35", selected)
     selected.isHearted = true;
     setFavorites([...favorites, selected])
-    console.log("37", selected)
+    // console.log("37", selected)
   } 
+
+  const unFavorite = (selected) => {
+    selected.isHearted = false;
+    const updateFavorites = favorites.filter((fave) => fave.isHearted)
+    setFavorites([...updateFavorites])
+  }
 
   const maintainCharacters = (matchedCharacter) => {
     return characters.find(character => matchedCharacter === character.name)
@@ -56,7 +62,7 @@ const App = () => {
           </Route>
           <Route exact path='/favorites'>
             {/* favorites is still considered the same as /:fullname because '/:fullname' makes anything after slash dynamic */}
-            <Favorites favorites={favorites} makeFavorite={makeFavorite}/>
+            <Favorites favorites={favorites} makeFavorite={makeFavorite} unfavorite={unFavorite}/>
           </Route>
           <Route path='/:fullname' render={(match) => {
             //leave the dynamic route at the end of all routes
@@ -64,7 +70,7 @@ const App = () => {
             //match is React Router keyword (an object) that has 4 native properties
             let matchedCharacter = match.match.params.fullname;
             let selectedCharacter = maintainCharacters(matchedCharacter);
-            return <DetailsCard selectedCharacter={selectedCharacter} makeFavorite={makeFavorite}/>     
+            return <DetailsCard selectedCharacter={selectedCharacter} makeFavorite={makeFavorite} unfavorite={unFavorite}/>     
           }} />
         </Switch>
       </main>
