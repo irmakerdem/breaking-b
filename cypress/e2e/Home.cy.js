@@ -21,4 +21,5 @@ describe('Home Page', () => {
     cy.get('h1').click();
 		cy.url().should('eq', 'http://localhost:3000/');
 	})
- })
+  
+})
