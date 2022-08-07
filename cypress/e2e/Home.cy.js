@@ -20,5 +20,13 @@ describe('Home Page', () => {
     cy.get('h1').click();
 		cy.url().should('eq', 'http://localhost:3000/');
 	})
+
+  it('Should be able to display a message when a 404 error occurs', () => {
+    cy.intercept('https://breakingbadapi.com/api/characters?category=Breaking+Bad', {
+      statusCode: 404
+    })
+    cy.visit('http://localhost:3000')
+    cy.contains("Oopsies! Something went wrong 🤡")
+  });
   
 })
