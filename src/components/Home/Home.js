@@ -2,6 +2,7 @@ import React from 'react';
 import './Home.css';
 import Card from '../Card/Card';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Home = ({ characters }) => {
   const characterCards = characters.map(character => {
@@ -27,6 +28,10 @@ const Home = ({ characters }) => {
       {characterCards}
     </>
   )
+}
+
+Home.propTypes = {
+  characters: PropTypes.array
 }
 
 export default Home; 

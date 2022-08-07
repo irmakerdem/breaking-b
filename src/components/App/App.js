@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import PropTypes from 'prop-types';
 import './App.css';
 import { getCharacters } from '../../apiCalls';
 import Home from '../Home/Home';
