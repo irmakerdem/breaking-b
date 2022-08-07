@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const DetailsCard = ({ selectedCharacter, makeFavorite, unfavorite }) => {
-  // let commaOccupation = occupation.join(', ')
+  let commaOccupation = selectedCharacter.occupation.join(', ')
 
   return (
     <>
@@ -12,7 +12,7 @@ const DetailsCard = ({ selectedCharacter, makeFavorite, unfavorite }) => {
         <img className='details-card-image' src={selectedCharacter.img} alt={selectedCharacter.name} />
         <p>Name: {selectedCharacter.name}</p>
         <p>Nickname: {selectedCharacter.nickname}</p>
-        <p>Occupation: {selectedCharacter.occupation}</p>
+        <p>Occupation: {commaOccupation}</p>
         <p>Status: {selectedCharacter.status}</p>
         <p>Portrayed By: {selectedCharacter.portrayed}</p>
       </div>
