@@ -54,7 +54,7 @@ const App = () => {
             <Home characters={characters}/>
           </Route>
           <Route exact path='/favorites'>
-            <Favorites favorites={favorites} makeFavorite={makeFavorite} unfavorite={unFavorite}/>
+            <Favorites favorites={favorites}/>
           </Route>
           <Route path='/:fullname' render={(match) => {
             let matchedCharacter = match.match.params.fullname;

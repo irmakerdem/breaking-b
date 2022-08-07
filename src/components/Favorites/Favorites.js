@@ -34,8 +34,6 @@ const Favorites = ({ favorites }) => {
 
 Favorites.propTypes = {
   favorites: PropTypes.array,
-  makeFavorite: PropTypes.func,
-  unfavorite: PropTypes.func
 }
 
 export default Favorites;
