@@ -54,13 +54,17 @@ const App = () => {
             <Home characters={characters}/>
           </Route>
           <Route exact path='/favorites'>
-            <Favorites favorites={favorites}/>
+            <Favorites favorites={favorites}/> 
           </Route>
           <Route path='/:fullname' render={(match) => {
             let matchedCharacter = match.match.params.fullname;
             let selectedCharacter = maintainCharacters(matchedCharacter);
+            if(!selectedCharacter) {
+              return 'Loading...⏳'
+            }
             return <DetailsCard selectedCharacter={selectedCharacter} makeFavorite={makeFavorite} unfavorite={unFavorite}/>     
-          }} />
+            }} 
+          />
         </Switch>
       </main>
     </>
