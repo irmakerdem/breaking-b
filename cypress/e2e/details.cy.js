@@ -6,7 +6,7 @@ describe('Details Page', () => {
   })
 
   it('Should display the title, two buttons, a heart, an image, and a list of character\s details', () => {
-    cy.url().should('eq', 'http://localhost:3000/Lydia%20Rodarte-Quayle');
+    cy.url().should('eq', 'http://localhost:3000/details/Lydia%20Rodarte-Quayle');
     cy.get('h1').contains('Breaking Bad');
     cy.get('.go-favorites').contains('GO TO FAVORITES');
     cy.get('.go-home').contains('GO HOME');

@@ -18,7 +18,7 @@ describe('Favorites Page', () => {
 
   it('Should be able to go back to Details Page when clicking favorited character', () => {
     cy.get('.character-image').click();
-    cy.url().should('eq', 'http://localhost:3000/Carmen%20Molina');
+    cy.url().should('eq', 'http://localhost:3000/details/Carmen%20Molina');
   })
 
   it('Should be able to go back to the Home Page when clicking page title', () => {

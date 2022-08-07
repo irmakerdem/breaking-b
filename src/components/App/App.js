@@ -57,7 +57,7 @@ const App = () => {
           <Route exact path='/favorites'>
             <Favorites favorites={favorites}/> 
           </Route>
-          <Route path='details/:fullname' render={(match) => {
+          <Route path='/details/:fullname' render={(match) => {
             console.log(match)
             let matchedCharacter = match.match.params.fullname;
             let selectedCharacter = maintainCharacters(matchedCharacter);
