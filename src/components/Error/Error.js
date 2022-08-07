@@ -9,7 +9,7 @@ const Error = ({}) => {
 				<p>Please return to the home page using the link above.</p>
 			</div>
 		</>
-	);
-};
+	)
+}
 
 export default Error;

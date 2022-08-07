@@ -26,7 +26,7 @@ const Favorites = ({ favorites }) => {
         <button className='go-home'>GO HOME</button>
       </Link>
       <h2>Favorite Characters</h2>
-      {favoritedCharacters.length ? favoritedCharacters : <p>Add your favorite characters!</p> }
+      {favoritedCharacters.length ? favoritedCharacters : <p>Add your favorite characters!</p>}
     </>
   )
 }

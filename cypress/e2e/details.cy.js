@@ -2,12 +2,12 @@ describe('Details Page', () => {
   beforeEach(() => {
     cy.intercept('GET', 'https://breakingbadapi.com/api/characters?category=Breaking+Bad', {fixture : 'getMockData.json'});
     cy.visit('http://localhost:3000/');
-    cy.get(':nth-child(3) > a > .character-image').click()
+    cy.get('h1').contains('Breaking Bad');
+    cy.get(':nth-child(3) > a > .character-image').click();
   })
 
   it('Should display the title, two buttons, a heart, an image, and a list of character\s details', () => {
     cy.url().should('eq', 'http://localhost:3000/details/Lydia%20Rodarte-Quayle');
-    cy.get('h1').contains('Breaking Bad');
     cy.get('.go-favorites').contains('GO TO FAVORITES');
     cy.get('.go-home').contains('GO HOME');
     cy.get('.details-card-image').should('be.visible');

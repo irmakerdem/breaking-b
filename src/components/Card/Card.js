@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const Card = ({ img, name }) => {
-  
   return (
     <section className='card'>
       <Link to={`/details/${name}`}>

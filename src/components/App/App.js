@@ -16,34 +16,34 @@ const App = () => {
     getCharacters()
     .then(data => {
       data = data.map(char => {
-        char.isHearted = false
+        char.isHearted = false;
         if(char.img.includes('static')) {
-          char.img = char.img.replace('static', 'vignette')
-          return char
+          char.img = char.img.replace('static', 'vignette');
+          return char;
         } else {
-          return char
+          return char;
         }
       })
-      return data
+      return data;
     })
     .then(data => {
-      setCharacters(...characters, data)
+      setCharacters(...characters, data);
     })
   }, [])
   
   const makeFavorite = (selected) => {
     selected.isHearted = true;
-    setFavorites([...favorites, selected])
+    setFavorites([...favorites, selected]);
   } 
 
   const unFavorite = (selected) => {
     selected.isHearted = false;
-    const updateFavorites = favorites.filter((fave) => fave.isHearted)
-    setFavorites([...updateFavorites])
+    const updateFavorites = favorites.filter((fave) => fave.isHearted);
+    setFavorites([...updateFavorites]);
   }
 
   const maintainCharacters = (matchedCharacter) => {
-    return characters.find(character => matchedCharacter === character.name)
+    return characters.find(character => matchedCharacter === character.name);
   }
 
   return (
@@ -58,7 +58,6 @@ const App = () => {
             <Favorites favorites={favorites}/> 
           </Route>
           <Route path='/details/:fullname' render={(match) => {
-            console.log(match)
             let matchedCharacter = match.match.params.fullname;
             let selectedCharacter = maintainCharacters(matchedCharacter);
             if(!selectedCharacter) {
