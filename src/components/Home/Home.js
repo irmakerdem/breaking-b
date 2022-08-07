@@ -21,12 +21,12 @@ const Home = ({ characters }) => {
   })
 
   return (
-    <section className='home-characters'>
+    <>
       <Link to='/favorites'>
         <button className='go-favorites'>GO TO FAVORITES</button>
       </Link>
       {characterCards}
-    </section>
+    </>
   )
 }
 

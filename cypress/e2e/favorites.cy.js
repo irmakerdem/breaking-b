@@ -1,6 +1,6 @@
 describe('Favorites Page', () => {
   beforeEach(() => {
-    cy.intercept('GET', 'https://breakingbadapi.com/api/characters/', {fixture : 'getMockData.json'});
+    cy.intercept('GET', 'https://breakingbadapi.com/api/characters?category=Breaking+Bad', {fixture : 'getMockData.json'});
     cy.visit('http://localhost:3000/favorites');
   })
 
