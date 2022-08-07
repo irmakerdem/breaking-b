@@ -1,0 +1,35 @@
+[
+  {
+    "char_id": 37,
+    "name": "Bogdan Wolynetz",
+    "occupation": [
+      "Former owner of A1A Car Wash"
+    ],
+    "img": "https://i.pinimg.com/originals/d5/c0/34/d5c0345ae70fbdbaa33b7537d685da54.jpg",
+    "status": "Alive",
+    "nickname": "Bogdan",
+    "portrayed": "Marius Stan"
+  },
+  {
+    "char_id": 14,
+    "name": "Lydia Rodarte-Quayle",
+    "occupation": [
+      "Executive at Madrigal"
+    ],
+    "img": "https://media1.popsugar-assets.com/files/thumbor/wERDST0TUb-iHCSb2r5ZpsvaZLo/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2013/07/17/675/n/1922283/fae2f583f04bb80f_Laura-Fraser-is-back-as-Lydia-Rodarte-Quayle_gallery_primary/i/Laura-Fraser-Lydia-Rodarte-Quayle.jpg",
+    "status": "Deceased",
+    "nickname": "Lydia",
+    "portrayed": "Laura Fraser"
+  },
+  {
+    "char_id": 25,
+    "name": "Carmen Molina",
+    "occupation": [
+      "High School Principal"
+    ],
+    "img": "https://vignette.wikia.nocookie.net/breakingbad/images/d/de/Carmen.JPG/revision/latest?cb=20100410125233",
+    "status": "Alive",
+    "nickname": "Carmen",
+    "portrayed": "Carmen Serano"
+  }
+]

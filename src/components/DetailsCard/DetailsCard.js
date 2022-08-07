@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const DetailsCard = ({ selectedCharacter, makeFavorite, unfavorite }) => {
-  let commaOccupation = selectedCharacter.occupation.join(', ')
-
+  let commaOccupation = selectedCharacter.occupation.join(', ');
   return (
     <>
       <div className='details-card'>
