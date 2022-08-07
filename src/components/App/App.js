@@ -6,6 +6,7 @@ import DetailsCard from '../DetailsCard/DetailsCard';
 import Favorites from '../Favorites/Favorites';
 import { Route, Switch } from 'react-router-dom';
 import Header from '../Header/Header';
+import Error from '../Error/Error';
 
 const App = () => {
   const [ characters, setCharacters ] = useState([]);
@@ -56,15 +57,17 @@ const App = () => {
           <Route exact path='/favorites'>
             <Favorites favorites={favorites}/> 
           </Route>
-          <Route path='/:fullname' render={(match) => {
+          <Route path='details/:fullname' render={(match) => {
+            console.log(match)
             let matchedCharacter = match.match.params.fullname;
             let selectedCharacter = maintainCharacters(matchedCharacter);
             if(!selectedCharacter) {
               return 'Loading...⏳'
             }
             return <DetailsCard selectedCharacter={selectedCharacter} makeFavorite={makeFavorite} unfavorite={unFavorite}/>     
-            }} 
+          }} 
           />
+          <Route path='*' render={()=> <Error />}/>
         </Switch>
       </main>
     </>
