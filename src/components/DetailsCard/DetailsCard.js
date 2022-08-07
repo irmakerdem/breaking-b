@@ -1,6 +1,7 @@
 import React from 'react';
 import './DetailsCard.css';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const DetailsCard = ({ selectedCharacter, makeFavorite, unfavorite }) => {
   // let commaOccupation = occupation.join(', ')
@@ -24,6 +25,12 @@ const DetailsCard = ({ selectedCharacter, makeFavorite, unfavorite }) => {
       {selectedCharacter.isHearted && <button className='full-heart'>💚</button> ? <button className='full-heart' onClick={() => unfavorite(selectedCharacter)}>💚</button> : <button className='empty-heart' onClick={() => makeFavorite(selectedCharacter)}>🤍</button>}
     </>
   )
+}
+
+DetailsCard.propTypes = {
+  selectedCharacter: PropTypes.object,
+  makeFavorite: PropTypes.func,
+  unfavorite: PropTypes.func
 }
 
 export default DetailsCard;
