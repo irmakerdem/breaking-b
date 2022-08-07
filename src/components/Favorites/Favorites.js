@@ -7,7 +7,6 @@ import PropTypes from 'prop-types';
 const Favorites = ({ favorites }) => {
 
   const favoritedCharacters = favorites.map(fav => {
-
     return (
       <Card
         img={fav.img}
@@ -27,7 +26,8 @@ const Favorites = ({ favorites }) => {
       <Link to='/'>
         <button className='go-home'>GO HOME</button>
       </Link>
-      {favoritedCharacters}
+      <h2>Favorite Characters</h2>
+      {favoritedCharacters.length ? favoritedCharacters : <p>Add your favorite characters!</p> }
     </>
   )
 }
