@@ -1,6 +1,6 @@
 .character-image {
-  height: 30em;
-  width: 25em;
+  height: 25em;
+  width: 20em;
 }
 
 .character-name {
@@ -8,8 +8,10 @@
 }
 
 .card {
-  height: 30em;
-  width: 25em;
-  border: 0.15em solid green;
+  height: 25em;
+  width: 20em;
+  font-weight: 400;
   margin-bottom: 7em;
+  margin-left: 2em;
+  margin-right: 2em;
 }

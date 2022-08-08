@@ -1,0 +1,33 @@
+.details-card-image {
+  height: 40em;
+  width: 31em;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.all-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.both-but {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.full-heart, .empty-heart {
+  height: 5em;
+  width: 7em;
+}
+
+.mini-fly {
+  height: 0.5em;
+  width: 1em;
+  margin-left: 0.5em;
+}

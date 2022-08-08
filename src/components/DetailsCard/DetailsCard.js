@@ -2,26 +2,39 @@ import React from 'react';
 import './DetailsCard.css';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import yellow from '../../assets/yellow-fly.png'
+import green from '../../assets/green-fly.png'
 
 const DetailsCard = ({ selectedCharacter, makeFavorite, unfavorite }) => {
   let commaOccupation = selectedCharacter.occupation.join(', ');
   return (
     <>
-      <div className='details-card'>
-        <img className='details-card-image' src={selectedCharacter.img} alt={selectedCharacter.name} />
-        <p>Name: {selectedCharacter.name}</p>
-        <p>Nickname: {selectedCharacter.nickname}</p>
-        <p>Occupation: {commaOccupation}</p>
-        <p>Status: {selectedCharacter.status}</p>
-        <p>Portrayed By: {selectedCharacter.portrayed}</p>
+      <div className='buttons-container'>
+        <Link to='/'>
+          <ul>
+            <li className='both-but'><span>GO HOME</span></li>
+          </ul>
+        </Link>
+        <Link to='/favorites'>
+          <ul>
+            <li className='both-but'><span>GO TO FAVORITES<img className='mini-fly' src={green}></img></span></li>
+          </ul>
+        </Link>
       </div>
-      <Link to='/'>
-        <button className='go-home'>GO HOME</button>
-      </Link>
-      <Link to='/favorites'>
-        <button className='go-favorites'>GO TO FAVORITES</button>
-      </Link>
-      {selectedCharacter.isHearted && <button className='full-heart'>💚</button> ? <button className='full-heart' onClick={() => unfavorite(selectedCharacter)}>💚</button> : <button className='empty-heart' onClick={() => makeFavorite(selectedCharacter)}>🤍</button>}
+    
+      <div className='all-details'>
+        <div className='details-image-container'>
+          <img className='details-card-image' src={selectedCharacter.img} alt={selectedCharacter.name} />
+        </div>
+        <div className='details-details-container'>
+          <p>Name: {selectedCharacter.name}</p>
+          <p>Nickname: {selectedCharacter.nickname}</p>
+          <p>Occupation: {commaOccupation}</p>
+          <p>Status: {selectedCharacter.status}</p>
+          <p>Portrayed By: {selectedCharacter.portrayed}</p>
+          {selectedCharacter.isHearted && <img className='full-heart' src={green}></img> ? <img className='full-heart' src={green} onClick={() => unfavorite(selectedCharacter)}></img> : <img className='empty-heart' src={yellow} onClick={() => makeFavorite(selectedCharacter)}></img>}
+        </div>
+      </div>
     </>
   )
 }

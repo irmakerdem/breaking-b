@@ -1,4 +1,22 @@
-.go-favorites {
-  height: 5em;
-  width: 10em;
+.go-home {
+  margin: auto;
+}
+
+.all-characters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.faves {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.mini-fly {
+  height: 0.5em;
+  width: 1em;
+  margin-left: 0.5em;
 }
