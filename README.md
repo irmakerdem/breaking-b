@@ -6,9 +6,10 @@
 - [Technologies](#technologies)
 - [Set Up](#set-up)
 - [Features](#features)
-- [Organizational Resources](#organizational-resources)
 - [Future Features](#future-features)
 - [Reflection](#reflection)
+- [Organizational Resources](#organizational-resources)
+- [Other Resources](#other-resources)
 - [Contributors](#contributors)
 - [Project Specifications](#project-specifications)
 
@@ -18,7 +19,7 @@ Breaking Bad is an app built to help you study 📚 for Breaking Bad Trivia Nigh
 This app fetches data from [The Breaking Bad API](https://breakingbadapi.com/).
 
 ### Deployment
-Project can be viewed [here]().
+Project can be viewed [here](https://breaking-bad-ie.herokuapp.com/).
 
 ### Technologies
 - JavaScript
@@ -39,33 +40,27 @@ Project can be viewed [here]().
 6. Enter `control + c` to stop the server at any time.
 
 ### Features
-![Travel Tracker gif](https://media.giphy.com/media/vhA6AzFigFfxUQcfg9/giphy.gif)
+![Breaking Bad gif](https://media.giphy.com/media/tFRq2uoB0glJ4XpTPd/giphy-downsized-large.gif)
 
 - User can view all characters on page load
+<img width="800" alt="Breaking Bad characters" src="https://user-images.githubusercontent.com/90080658/183351718-3fe1bab7-4d3e-495c-8253-303000fff961.png">
 
 - User can click on a character and see their details
+<img width="800" alt="Jesse Pinkman details" src="https://user-images.githubusercontent.com/90080658/183351870-241cf174-ee5c-482f-aea8-460053fb2299.png">
 
 - User can favorite and unfavorite a character 
-
-<img width="600" alt="trip-request-image" src="https://user-images.githubusercontent.com/90080658/173740878-c7021c3b-656c-4410-9490-50ff6b8522b3.png">
-
 - User can see all of their favorite characters on the favorites page
+<img width="800" alt="Breaking Bad favorite characters" src="https://user-images.githubusercontent.com/90080658/183351913-9abfc18a-0e50-4985-a52e-c268defe56b2.png">
+
 - User can use the left and right arrow to flip through the three pages
 - User can use the GO HOME or GO TO FAVORITES buttons to go to those designated pages
 - User will be taken to an error page if they enter in a non-existent url
-
-### Organizational Resources
-- [GitHub Project](https://github.com/users/irmakerdem/projects/2/views/1) for Kanban board
-- [Figma](https://www.figma.com/file/uGW24Re7pa9mSMlTnkpDGR/Breaking-Bad?node-id=0%3A1) for wireframe
-- [Figma Jam](https://www.figma.com/file/VqcLrxrZ6faFDn395G43vJ/Breaking-Bad---Component-Architecture?node-id=0%3A1) for component architecture
-- [Google Sheet](https://docs.google.com/document/d/1r3kwnpzY3t_LQJT2IMmYBdd87Yog0OqJi-PnhAvyNR8) for design inspirations
 
 ### Future Features
 - User can unfavorite from Favorites Page directly
 - User can search for a character on Home Page
 - User can filter Home Page for characters' status (dead/alive)
 - Breaking Bad theme song plays on page load
-- Filter out Better Call Saul characters
 - Use API's second endpoint to show famous quotes for some characters
 - Update styling/design for better UX/UI
 
@@ -74,6 +69,15 @@ Project can be viewed [here]().
 - I had initially created many divs and classes for styling purposes. Very quickly I realized how messy this technique was in React. Due to the compliling of Webpack and React, I needed very minimal CSS styling to get the home page to render images with a specific size as well as them being responsive (using flex box) for bigger/smaller screen sizes. I learned that em's are more friendly for creating a responsive app than percentages.
 - This project was my first time using 3 concepts. 1) Hooks. It was very satisfying to never have to use the word "this" in the codebase. 2) Reusing Components. I reused the Card in the Home Page and the Favorites Page instead of creating an unnecessary FavoriteCard component. This made my codebased very modular! 3) Prop types. Using prop types proved to be a simple new addition to the code base that explicitly clarified the data types that were used in codebase. 
 - When rendering the Error component, I ran into errors on the Details Page with the path being set to "*". To resolve this issue, I added "/details" to the Details Page path.
+
+### Organizational Resources
+- [GitHub Project](https://github.com/users/irmakerdem/projects/2/views/1) for Kanban board
+- [Figma](https://www.figma.com/file/uGW24Re7pa9mSMlTnkpDGR/Breaking-Bad?node-id=0%3A1) for wireframe
+- [Figma Jam](https://www.figma.com/file/VqcLrxrZ6faFDn395G43vJ/Breaking-Bad---Component-Architecture?node-id=0%3A1) for component architecture
+- [Google Sheet](https://docs.google.com/document/d/1r3kwnpzY3t_LQJT2IMmYBdd87Yog0OqJi-PnhAvyNR8) for design inspirations
+
+### Other Resources
+- [Codepen](https://codepen.io/comehope/pen/PdaNXw) for button design inspiration
 
 ### Contributors
 - [Irmak Erdem](https://www.linkedin.com/in/irmakerdem/)
