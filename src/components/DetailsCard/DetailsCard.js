@@ -12,12 +12,12 @@ const DetailsCard = ({ selectedCharacter, makeFavorite, unfavorite }) => {
       <div className='buttons-container'>
         <Link to='/'>
           <ul>
-            <li className='both-but'><span>GO HOME</span></li>
+            <li className='both-but home-but'><span>GO HOME</span></li>
           </ul>
         </Link>
         <Link to='/favorites'>
           <ul>
-            <li className='both-but'><span>GO TO FAVORITES<img className='mini-fly' src={green}></img></span></li>
+            <li className='both-but fav-but'><span>GO TO FAVORITES<img className='mini-fly' src={green}></img></span></li>
           </ul>
         </Link>
       </div>
