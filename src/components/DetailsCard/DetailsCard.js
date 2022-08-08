@@ -17,7 +17,7 @@ const DetailsCard = ({ selectedCharacter, makeFavorite, unfavorite }) => {
         </Link>
         <Link to='/favorites'>
           <ul>
-            <li className='both-but fav-but'><span>GO TO FAVORITES<img className='mini-fly' src={green}></img></span></li>
+            <li className='both-but fav-but'><span>GO TO FAVORITES<img className='mini-fly' src={green} alt='golden moth'></img></span></li>
           </ul>
         </Link>
       </div>
@@ -31,7 +31,7 @@ const DetailsCard = ({ selectedCharacter, makeFavorite, unfavorite }) => {
           <p>Occupation: {commaOccupation}</p>
           <p>Status: {selectedCharacter.status}</p>
           <p>Portrayed By: {selectedCharacter.portrayed}</p>
-          {selectedCharacter.isHearted && <img className='full-heart' src={green}></img> ? <img className='full-heart' src={green} onClick={() => unfavorite(selectedCharacter)}></img> : <img className='empty-heart' src={yellow} onClick={() => makeFavorite(selectedCharacter)}></img>}
+          {selectedCharacter.isHearted && <img className='full-heart' src={green} alt='golden moth'></img> ? <img className='full-heart' src={green} alt='golden moth' onClick={() => unfavorite(selectedCharacter)}></img> : <img className='empty-heart' src={yellow} alt='golden moth' onClick={() => makeFavorite(selectedCharacter)}></img>}
         </div>
       </div>
     </>
