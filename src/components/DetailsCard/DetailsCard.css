@@ -1,6 +1,7 @@
 .details-card-image {
   height: 40em;
   width: 31em;
+  margin-right: 5em;
 }
 
 .buttons-container {
@@ -14,6 +15,8 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 5em;
 }
 
 .both-but {
@@ -22,12 +25,18 @@
 }
 
 .full-heart, .empty-heart {
-  height: 5em;
-  width: 7em;
+  height: 3em;
+  width: 5em;
+  border: 0.1em solid black;
 }
 
 .mini-fly {
   height: 0.5em;
   width: 1em;
   margin-left: 0.5em;
+}
+
+.details-details-container {
+  font-size: 1.9em;
+  width: 15em;
 }

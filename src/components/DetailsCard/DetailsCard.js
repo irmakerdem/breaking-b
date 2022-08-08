@@ -2,8 +2,8 @@ import React from 'react';
 import './DetailsCard.css';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import yellow from '../../assets/yellow-fly.png'
-import green from '../../assets/green-fly.png'
+import yellow from '../../assets/yellow-fly.png';
+import green from '../../assets/green-fly.png';
 
 const DetailsCard = ({ selectedCharacter, makeFavorite, unfavorite }) => {
   let commaOccupation = selectedCharacter.occupation.join(', ');
@@ -21,7 +21,6 @@ const DetailsCard = ({ selectedCharacter, makeFavorite, unfavorite }) => {
           </ul>
         </Link>
       </div>
-    
       <div className='all-details'>
         <div className='details-image-container'>
           <img className='details-card-image' src={selectedCharacter.img} alt={selectedCharacter.name} />

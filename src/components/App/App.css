@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&display=swap');
 /* * {
   border: red 1px solid;
 } */
@@ -12,7 +11,7 @@ a {
 body {
   margin: 0;
   color: black;
-  font-family: 'Merriweather', serif;
+  font-family: 'Antonio', sans-serif;
   background-image: url('../../assets/green.png');
   background-size: contain;
   /* background: linear-gradient(273deg, #0c160e, #153a0b, #0d2108);
@@ -88,7 +87,7 @@ li span {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   text-transform: capitalize;
   transform: translateX(calc(-0.15em * 3 - 0.08em * 2));
   transition: 0.3s;

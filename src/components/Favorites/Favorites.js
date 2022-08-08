@@ -5,6 +5,7 @@ import Card from '../Card/Card';
 import PropTypes from 'prop-types';
 
 const Favorites = ({ favorites }) => {
+  window.scroll(0,0);
   const favoritedCharacters = favorites.map(fav => {
     return (
       <Card

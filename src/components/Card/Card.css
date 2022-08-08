@@ -5,13 +5,19 @@
 
 .character-name {
   text-align: center;
+  background: green;
+  height: 2em;
+  color: white;
+  padding-top: 0.5em;
+  font-size: 1.3em;
+  margin-top: 0.5em;
 }
 
 .card {
   height: 25em;
   width: 20em;
-  font-weight: 400;
-  margin-bottom: 7em;
+  font-weight: 700;
+  margin-bottom: 11em;
   margin-left: 2em;
   margin-right: 2em;
 }

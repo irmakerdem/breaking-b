@@ -16,3 +16,7 @@
   align-items: center;
   justify-content: space-evenly;
 }
+
+.fav-characters-head {
+  font-size: 3em;
+}
