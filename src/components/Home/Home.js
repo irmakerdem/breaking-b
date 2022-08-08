@@ -27,7 +27,7 @@ const Home = ({ characters }) => {
       <div className='faves'>
         <Link to='/favorites'>
           <ul>
-            <li><span>GO TO FAVORITES<img className='mini-fly' src={green}></img></span></li>
+            <li><span>GO TO FAVORITES<img className='mini-fly' src={green} alt='golden moth'></img></span></li>
           </ul>
         </Link>
       </div>
