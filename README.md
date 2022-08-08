@@ -40,17 +40,18 @@ Project can be viewed [here](https://breaking-bad-ie.herokuapp.com/).
 6. Enter `control + c` to stop the server at any time.
 
 ### Features
-![Travel Tracker gif](https://media.giphy.com/media/vhA6AzFigFfxUQcfg9/giphy.gif)
+![Breaking Bad gif](https://media.giphy.com/media/tFRq2uoB0glJ4XpTPd/giphy-downsized-large.gif)
 
 - User can view all characters on page load
+<img width="800" alt="Breaking Bad characters" src="https://user-images.githubusercontent.com/90080658/183351718-3fe1bab7-4d3e-495c-8253-303000fff961.png">
 
 - User can click on a character and see their details
+<img width="800" alt="Jesse Pinkman details" src="https://user-images.githubusercontent.com/90080658/183351870-241cf174-ee5c-482f-aea8-460053fb2299.png">
 
 - User can favorite and unfavorite a character 
-
-<img width="600" alt="trip-request-image" src="https://user-images.githubusercontent.com/90080658/173740878-c7021c3b-656c-4410-9490-50ff6b8522b3.png">
-
 - User can see all of their favorite characters on the favorites page
+<img width="800" alt="Breaking Bad favorite characters" src="https://user-images.githubusercontent.com/90080658/183351913-9abfc18a-0e50-4985-a52e-c268defe56b2.png">
+
 - User can use the left and right arrow to flip through the three pages
 - User can use the GO HOME or GO TO FAVORITES buttons to go to those designated pages
 - User will be taken to an error page if they enter in a non-existent url
