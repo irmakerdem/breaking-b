@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import green from '../../assets/green-fly.png'
 
 const Home = ({ characters }) => {
+  window.scroll(0,0);
   const characterCards = characters.map(character => {
     return (
       <Card
