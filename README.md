@@ -6,9 +6,10 @@
 - [Technologies](#technologies)
 - [Set Up](#set-up)
 - [Features](#features)
-- [Organizational Resources](#organizational-resources)
 - [Future Features](#future-features)
 - [Reflection](#reflection)
+- [Organizational Resources](#organizational-resources)
+- [Other Resources](#other-resources)
 - [Contributors](#contributors)
 - [Project Specifications](#project-specifications)
 
@@ -54,12 +55,6 @@ Project can be viewed [here]().
 - User can use the GO HOME or GO TO FAVORITES buttons to go to those designated pages
 - User will be taken to an error page if they enter in a non-existent url
 
-### Organizational Resources
-- [GitHub Project](https://github.com/users/irmakerdem/projects/2/views/1) for Kanban board
-- [Figma](https://www.figma.com/file/uGW24Re7pa9mSMlTnkpDGR/Breaking-Bad?node-id=0%3A1) for wireframe
-- [Figma Jam](https://www.figma.com/file/VqcLrxrZ6faFDn395G43vJ/Breaking-Bad---Component-Architecture?node-id=0%3A1) for component architecture
-- [Google Sheet](https://docs.google.com/document/d/1r3kwnpzY3t_LQJT2IMmYBdd87Yog0OqJi-PnhAvyNR8) for design inspirations
-
 ### Future Features
 - User can unfavorite from Favorites Page directly
 - User can search for a character on Home Page
@@ -74,6 +69,15 @@ Project can be viewed [here]().
 - I had initially created many divs and classes for styling purposes. Very quickly I realized how messy this technique was in React. Due to the compliling of Webpack and React, I needed very minimal CSS styling to get the home page to render images with a specific size as well as them being responsive (using flex box) for bigger/smaller screen sizes. I learned that em's are more friendly for creating a responsive app than percentages.
 - This project was my first time using 3 concepts. 1) Hooks. It was very satisfying to never have to use the word "this" in the codebase. 2) Reusing Components. I reused the Card in the Home Page and the Favorites Page instead of creating an unnecessary FavoriteCard component. This made my codebased very modular! 3) Prop types. Using prop types proved to be a simple new addition to the code base that explicitly clarified the data types that were used in codebase. 
 - When rendering the Error component, I ran into errors on the Details Page with the path being set to "*". To resolve this issue, I added "/details" to the Details Page path.
+
+### Organizational Resources
+- [GitHub Project](https://github.com/users/irmakerdem/projects/2/views/1) for Kanban board
+- [Figma](https://www.figma.com/file/uGW24Re7pa9mSMlTnkpDGR/Breaking-Bad?node-id=0%3A1) for wireframe
+- [Figma Jam](https://www.figma.com/file/VqcLrxrZ6faFDn395G43vJ/Breaking-Bad---Component-Architecture?node-id=0%3A1) for component architecture
+- [Google Sheet](https://docs.google.com/document/d/1r3kwnpzY3t_LQJT2IMmYBdd87Yog0OqJi-PnhAvyNR8) for design inspirations
+
+### Other Resources
+- [Codepen](https://codepen.io/comehope/pen/PdaNXw) for button design inspiration
 
 ### Contributors
 - [Irmak Erdem](https://www.linkedin.com/in/irmakerdem/)
