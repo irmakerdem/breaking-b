@@ -19,7 +19,7 @@ Breaking Bad is an app built to help you study 📚 for Breaking Bad Trivia Nigh
 This app fetches data from [The Breaking Bad API](https://breakingbadapi.com/).
 
 ### Deployment
-Project can be viewed [here]().
+Project can be viewed [here](https://breaking-bad-ie.herokuapp.com/).
 
 ### Technologies
 - JavaScript
@@ -60,7 +60,6 @@ Project can be viewed [here]().
 - User can search for a character on Home Page
 - User can filter Home Page for characters' status (dead/alive)
 - Breaking Bad theme song plays on page load
-- Filter out Better Call Saul characters
 - Use API's second endpoint to show famous quotes for some characters
 - Update styling/design for better UX/UI
 
