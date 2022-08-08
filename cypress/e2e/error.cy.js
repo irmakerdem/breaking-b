@@ -2,7 +2,7 @@ describe('Error Page', () => {
   beforeEach(() => {
     cy.intercept('GET', 'https://breakingbadapi.com/api/characters?category=Breaking+Bad', {fixture : 'getMockData.json'});
     cy.visit('http://localhost:3000/turtle');
-    cy.get('h1').contains('Breaking Bad');
+    cy.get('.BB-logo').should('be.visible');
   })
 
   it('Should display an error message', () => {
@@ -11,7 +11,7 @@ describe('Error Page', () => {
   })
 
   it('Should be able to go back to the home page when clicking page title', () => {
-    cy.get('h1').click();
+    cy.get('.BB-logo').click();
 		cy.url().should('eq', 'http://localhost:3000/');
 	})
 

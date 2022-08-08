@@ -25,7 +25,7 @@ const Favorites = ({ favorites }) => {
     <div className='big-favorites-container'>
       <Link to='/'>
         <ul>
-          <li><span>GO HOME</span></li>
+          <li className='home-but'><span>GO HOME</span></li>
         </ul>
       </Link>
       <div className='fav-characters-container'>
