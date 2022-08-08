@@ -1,4 +1,22 @@
-.go-home {
-  height: 5em;
-  width: 10em;
+.fav-characters-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.big-favorites-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fav-characters-only {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.fav-characters-head {
+  font-size: 3em;
 }

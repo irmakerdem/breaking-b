@@ -5,6 +5,7 @@ import Card from '../Card/Card';
 import PropTypes from 'prop-types';
 
 const Favorites = ({ favorites }) => {
+  window.scroll(0,0);
   const favoritedCharacters = favorites.map(fav => {
     return (
       <Card
@@ -21,13 +22,19 @@ const Favorites = ({ favorites }) => {
   })
 
   return (
-    <>
+    <div className='big-favorites-container'>
       <Link to='/'>
-        <button className='go-home'>GO HOME</button>
+        <ul>
+          <li className='home-but'><span>GO HOME</span></li>
+        </ul>
       </Link>
-      <h2>Favorite Characters</h2>
-      {favoritedCharacters.length ? favoritedCharacters : <p>Add your favorite characters!</p>}
-    </>
+      <div className='fav-characters-container'>
+        <h2 className='fav-characters-head'>Favorite Characters</h2>
+      </div>
+      <div className='fav-characters-only'>
+        {favoritedCharacters.length ? favoritedCharacters : <p>Add your favorite characters!</p>}
+      </div>
+    </div>
   )
 }
 

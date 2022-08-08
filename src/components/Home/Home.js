@@ -3,6 +3,7 @@ import './Home.css';
 import Card from '../Card/Card';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import green from '../../assets/green-fly.png'
 
 const Home = ({ characters }) => {
   const characterCards = characters.map(character => {
@@ -22,10 +23,16 @@ const Home = ({ characters }) => {
 
   return (
     <>
-      <Link to='/favorites'>
-        <button className='go-favorites'>GO TO FAVORITES</button>
-      </Link>
-      {characterCards}
+      <div className='faves'>
+        <Link to='/favorites'>
+          <ul>
+            <li><span>GO TO FAVORITES<img className='mini-fly' src={green}></img></span></li>
+          </ul>
+        </Link>
+      </div>
+      <div className='all-characters'>
+        {characterCards}
+      </div>
     </>
   )
 }
