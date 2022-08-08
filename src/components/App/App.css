@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&display=swap');
-/* * {
-  border: red 1px solid;
-} */
 
 a {
   text-decoration: none;
@@ -14,28 +11,7 @@ body {
   font-family: 'Antonio', sans-serif;
   background-image: url('../../assets/green.png');
   background-size: contain;
-  /* background: linear-gradient(273deg, #0c160e, #153a0b, #0d2108);
-  background-size: 600% 600%;
-  -webkit-animation: AnimationName 6s ease infinite;
-  -moz-animation: AnimationName 6s ease infinite;
-  animation: AnimationName 6s ease infinite; */
 }
-
-/* @-webkit-keyframes AnimationName {
-  0%{background-position:0% 48%}
-  50%{background-position:100% 53%}
-  100%{background-position:0% 48%}
-}
-@-moz-keyframes AnimationName {
-  0%{background-position:0% 48%}
-  50%{background-position:100% 53%}
-  100%{background-position:0% 48%}
-}
-@keyframes AnimationName {
-  0%{background-position:0% 48%}
-  50%{background-position:100% 53%}
-  100%{background-position:0% 48%}
-} */
 
 ul {
   padding: 0;
