@@ -19,7 +19,7 @@ Breaking Bad is an app built to help you study 📚 for Breaking Bad Trivia Nigh
 This app fetches data from [The Breaking Bad API](https://breakingbadapi.com/).
 
 ### Deployment
-Project can be viewed [here](https://breaking-bad-ie.herokuapp.com/).
+Project can be viewed [here](https://breaking-b-ie.herokuapp.com/).
 
 ### Technologies
 - JavaScript
